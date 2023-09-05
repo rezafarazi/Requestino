@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="618.0" style="-fx-background-color: #FFFFFF00;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="126.0" fitWidth="233.0" layoutX="432.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Main/Assets/logo-removebg.png" />
+         </image>
+         <effect>
+            <Reflection bottomOpacity="0.13" fraction="0.74" topOpacity="0.57" />
+         </effect>
+      </ImageView>
+      <Label fx:id="splash_logo_image" layoutX="223.0" layoutY="66.0" text="Requestino" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="34.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.34259259700775146" green="0.3741471767425537" blue="0.9736841917037964" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <Reflection bottomOpacity="0.12" fraction="1.0" topOpacity="0.39" />
+         </effect>
+      </Label>
+      <Label layoutX="298.0" layoutY="235.0" text="V 1.0" textFill="#311a68">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="126.0" fitWidth="127.0" layoutX="59.0" layoutY="22.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Main/Assets/logo-removebg.png" />
+         </image>
+         <effect>
+            <Reflection bottomOpacity="0.13" fraction="0.74" topOpacity="0.57" />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>
