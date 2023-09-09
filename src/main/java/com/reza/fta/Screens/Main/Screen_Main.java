@@ -2,15 +2,14 @@ package com.reza.fta.Screens.Main;
 
 import com.jfoenix.controls.*;
 import com.jfoenix.controls.events.JFXDialogEvent;
+import com.reza.fta.Functions.Requests;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -28,7 +27,7 @@ public class Screen_Main implements Initializable
     JFXTextField URL_Box;
 
     @FXML
-    Label Response_Text;
+    JFXTextArea Response_Box;
 
     @FXML
     StackPane Dialog_Base;
@@ -183,6 +182,17 @@ public class Screen_Main implements Initializable
         Done.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
+                try
+                {
+                    String result = Requests.SendGetRequest(URL_Box.getText().toString(), Head_Text_Area.getText().toString());
+                    Response_Box.setText(result);
+                }
+                catch (Exception e)
+                {
+                    System.out.println(e.getMessage());
+                }
+
                 Dialog.close();
             }
         });
@@ -242,7 +252,18 @@ public class Screen_Main implements Initializable
         //Actions
         Done.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(ActionEvent event) {
+            public void handle(ActionEvent event)
+            {
+                try
+                {
+                    String result = Requests.SendPostRequest(URL_Box.getText().toString(),Parametrs_Text_Area.getText().toString(), Head_Text_Area.getText().toString());
+                    Response_Box.setText(result);
+                }
+                catch (Exception e)
+                {
+                    System.out.println(e.getMessage());
+                }
+
                 Dialog.close();
             }
         });
