@@ -165,6 +165,8 @@ public class Screen_Main implements Initializable
         Head_Text_Area.setPromptText("Head");
         Head_Text_Area.setFocusColor(Paint.valueOf("#4d88f0"));
 
+        Head_Text_Area.setText("Content-type:text/json\r\n");
+
         VBox LinearLyout=new VBox(
             text,
             Head_Text_Area
@@ -234,6 +236,8 @@ public class Screen_Main implements Initializable
 
         Head_Text_Area.setFocusColor(Paint.valueOf("#4d88f0"));
         Parametrs_Text_Area.setFocusColor(Paint.valueOf("#4d88f0"));
+
+        Head_Text_Area.setText("Content-type:text/json\r\n");
 
         VBox LinearLyout=new VBox(
                 text,
